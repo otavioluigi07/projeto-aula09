@@ -15,7 +15,9 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, "..", "frontend", "index.html"));
 });
 
+
 app.get('/get',(req, res) =>{
+    console.log("passei no endpoint");
     res.setHeader('Acess-Control-Allow-Origin', '*');
     var sql = 'SELECT * FROM program'
     db.all(sql,[],(err,rows)=>{
